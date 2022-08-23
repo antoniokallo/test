@@ -1,6 +1,7 @@
 import styles from './styles.module.css';
 import { useEffect, useState } from 'react';
 import { Battle, EndMenu, StartMenu } from 'components';
+import { Routes, routes } from 'react-router-dom';
 
 export const App = () => {
   const [winner, setWinner] = useState();
@@ -13,6 +14,7 @@ export const App = () => {
   }, [mode]);
 
   return (
+    <Routes></Routes>
     <div className={styles.main}>
       {mode === 'start' && (
         <StartMenu onStartClick={() => setMode('battle')} />
